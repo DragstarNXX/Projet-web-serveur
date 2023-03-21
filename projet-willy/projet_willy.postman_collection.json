@@ -1,0 +1,353 @@
+{
+	"info": {
+		"_postman_id": "09ffd823-8a47-4468-ba6c-70870903dddd",
+		"name": "Project Willy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19014910"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nom\": \"Toto\",\n    \"prenom\": \"Toto 1\",\n    \"email\": \"toto@gmail.com\",\n    \"password\": \"totoMDP\",\n    \"naissance\": \"2001-03-12\",\n    \"telephone\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/users",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nom\": \"Toto\",\n    \"prenom\": \"Toto 1\",\n    \"email\": \"toto@gmail.com\",\n    \"password\": \"totoMDP\",\n    \"naissance\": \"2001-03-12\",\n    \"telephone\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/users/1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/users/1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/users/1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/users",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"toto@gmail.com\",\n    \"password\": \"totoMDP\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/auth/login",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/protected",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/protected",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"protected"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Role",
+			"item": [
+				{
+					"name": "Get all roles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/roles",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"roles"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Automobile",
+			"item": [
+				{
+					"name": "create automobile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"annee\": \"2004-12-18\",\n        \"marque\": \"HYUNDAI\",\n        \"modele\": \"IONIQ 7A\",\n        \"prixAffiche\":1200,\n        \"kilometrage\": 250000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/automobiles",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"automobiles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update automobile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"annee\": \"2004-12-18\",\n    \"marque\": \"HYUNDAI\",\n    \"modele\": \"IONIQ 5\",\n    \"prixAffiche\": 1200,\n    \"kilometrage\": 250000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}/automobiles/1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"automobiles",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete automobile",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/automobiles/1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"automobiles",
+								"1"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get automobile by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/automobiles/1",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"automobiles",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all automobile",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}/automobiles",
+							"host": [
+								"{{API_URL}}"
+							],
+							"path": [
+								"automobiles"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJwcmVub20iOiJUb3RvIDEiLCJub20iOiJUb3RvIiwibmFpc3NhbmNlIjoiMjAwMS0wMy0xMlQwMDowMDowMC4wMDBaIiwiZW1haWwiOiJ0b3RvQGdtYWlsLmNvbSIsInRlbGVwaG9uZSI6IiIsInBhc3N3b3JkIjoiYjYxZWFiMmU5MGM0NzllYzBkNDhmOWEzZjM3ZDA0YjBhNWYzZjIyM2Q3NTRhNjc4YzFhMzI4MDA2OTYyODBjMyIsImNyZWF0ZWRBdCI6IjIwMjMtMDMtMjFUMTQ6MzU6MDYuMDAwWiIsInVwZGF0ZWRBdCI6IjIwMjMtMDMtMjFUMTQ6MzU6MDYuMDAwWiJ9LCJpYXQiOjE2Nzk0MTI2NzEsImV4cCI6MTY3OTQxNjI3MX0.pWxUi04OfdYyU0K14rDXvFJlwbSC2F1EYtoq_7lS0QQ",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_URL",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
